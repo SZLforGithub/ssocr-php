@@ -1,0 +1,20 @@
+{
+    "name": "louissu/ssocr-php",
+    "description": "ssocr-php is a package which implement ssocr with pure php",
+    "type": "library",
+    "require": {
+        "php": "^7.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Louis.Su",
+            "email": "i0989872540@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Louissu\\": "src/ssocr"
+        }
+    }
+}
