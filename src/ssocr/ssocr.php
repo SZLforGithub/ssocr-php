@@ -2,6 +2,10 @@
 
 namespace Louissu;
 
+
+use Imagick;
+use ImagickPixel;
+
 class SSOCR
 {
     protected $image;
