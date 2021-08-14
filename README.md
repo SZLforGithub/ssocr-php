@@ -15,7 +15,9 @@ composer require louissu/ssocr-php
 This function set Threshold for binarization, the value is between 0 to 1. If the result of recognizing is not satisfactory, you can adjust this value.
 
 ### setScale
-This function set the scale parameter of resize, the value is between 0 to 1. If your image is too large to make it slow, you can adjust this value.
+This function set the scale parameter of resize, the value means the denominator of width and height. For example, the below example means the width and height of 87.png will divide by 2.
+
+If your image is too large to make it slow, you can adjust this value.
 
 ## Example
 ```php
@@ -27,7 +29,7 @@ use Louissu\SSOCR;
 $ssocr  = new SSOCR('87.png');
 $result = $ssocr
     ->setThreshold(0.1)
-    ->setScale(0.5)
+    ->setScale(2)
     ->run();
 
 echo $result;
