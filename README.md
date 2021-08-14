@@ -1,6 +1,8 @@
 # ssocr-php
-A package implements ssocr with pure php.
+A package implements [ssocr](https://github.com/auerswal/ssocr) with pure php.
 
+## Requirement
+- Imagick extension
 ## Installation
 Make sure you have installed Imagick extension, and run the command below and you will get the latest version:
 ```
@@ -8,7 +10,12 @@ composer require louissu/ssocr-php
 ```
 
 ## Document
-TODO
+
+### setThreshold
+This function set Threshold for binarization, the value is between 0 to 1. If the result of recognizing is not satisfactory, you can adjust this value.
+
+### setScale
+This function set the scale parameter of resize, the value is between 0 to 1. If your image is too large to make it slow, you can adjust this value.
 
 ## Example
 ```php
