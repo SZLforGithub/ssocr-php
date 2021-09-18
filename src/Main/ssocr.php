@@ -71,6 +71,8 @@ class SSOCR
 
         $result = $this->getResult($numberPositions);
 
+        unlink('tmp.' . $this->image);
+
         return $result;
     }
 
@@ -258,7 +260,6 @@ class SSOCR
             }
         }
 
-        unlink('tmp.' . $this->image);
         return $result;
     }
 }
