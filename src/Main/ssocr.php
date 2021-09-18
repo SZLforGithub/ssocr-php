@@ -1,7 +1,6 @@
 <?php
 
-namespace Louissu;
-
+namespace Louissu\Main;
 
 use Imagick;
 use ImagickPixel;
@@ -37,11 +36,14 @@ class SSOCR
 
     public function __construct($image)
     {
+
         $this->image = $image;
     }
 
     public function run()
     {
+        $this->checkType($this->image);
+
         $im = new Imagick();
         $im->readImage($this->image);
 
@@ -84,6 +86,18 @@ class SSOCR
         $this->scale = $scale;
 
         return $this;
+    }
+
+    private function checkType($file)
+    {
+        $allowed = ['image/png', 'image/jpeg'];
+        $fileType = mime_content_type($file);
+
+        if (!in_array($fileType, $allowed)) {
+            throw new \InvalidArgumentException(
+                'File type is invalid, only jpg/jpeg/png can be processed.'
+            );
+        }
     }
 
     private function getWidthAndHeight($im)
