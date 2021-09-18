@@ -24,7 +24,7 @@ If your image is too large to make it slow, you can adjust this value.
 <?php
 require "vendor/autoload.php";
 
-use Louissu\SSOCR;
+use Louissu\Main\SSOCR;
 
 $ssocr  = new SSOCR('87.png');
 $result = $ssocr
