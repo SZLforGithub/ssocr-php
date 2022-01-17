@@ -34,3 +34,6 @@ $result = $ssocr
 
 echo $result;
 ```
+
+## More
+I write the reason why I do this project and some explanations of code in [my blog article](https://szlforgithub.github.io/post/php_ssocr). You can visit if you are interested it!
